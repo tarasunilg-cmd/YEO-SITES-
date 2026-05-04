@@ -1,0 +1,111 @@
+<html>
+        <head><title>Downloaded HTML</title></head>
+        <body>
+            <pre style="white-space: pre-wrap; word-wrap: break-word;"><!DOCTYPE html>
+<html>
+<head>
+  <title>AI Website Builder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    textarea {
+      width: 80%;
+      height: 100px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #22c55e;
+      color: black;
+    }
+
+    .secondary {
+      background: #3b82f6;
+      color: white;
+    }
+
+    #output {
+      margin-top: 20px;
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 10px;
+      white-space: pre-wrap;
+      max-height: 300px;
+      overflow: auto;
+    }
+
+    iframe {
+      width: 90%;
+      height: 400px;
+      margin-top: 20px;
+      border-radius: 10px;
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🚀 Free AI Website Builder</h1>
+
+<p>Describe your website idea:</p>
+
+<textarea id="prompt" placeholder="Example: A bakery website with menu and contact info"></textarea><br>
+
+<button class="secondary" onclick="openChatGPT()">🤖 Generate with AI</button>
+<button class="primary" onclick="previewSite()">👀 Preview</button>
+<button onclick="copyCode()">📋 Copy Code</button>
+
+<div id="output">Your generated code will appear here...</div>
+
+<iframe id="preview"></iframe>
+
+<script>
+function openChatGPT() {
+  let prompt = document.getElementById("prompt").value;
+
+  let fullPrompt = "Create a complete HTML, CSS website for: " + prompt;
+
+  alert("Copy this prompt and paste into ChatGPT:\\n\\n" + fullPrompt);
+  window.open("https://chat.openai.com/", "_blank");
+}
+
+function previewSite() {
+  let code = document.getElementById("output").innerText;
+  let iframe = document.getElementById("preview");
+  iframe.srcdoc = code;
+}
+
+function copyCode() {
+  let code = document.getElementById("output").innerText;
+  navigator.clipboard.writeText(code);
+  alert("Code copied!");
+}
+</script>
+
+</body>
+</html></pre>
+        </body>
+    </html>
